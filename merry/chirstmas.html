@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOU ARE INVITED!!</title>
+    <!-- Corrected Bootstrap link to local path -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: linear-gradient(to left, rgb(11, 167, 40), white);
+            overflow-y: hidden;
+        }
+
+        img {
+            width: 50%;
+            height: auto;
+            display: block; /* To remove extra spacing */
+            margin: auto; /* To center the image */
+            float: left; /* Align images from left to right */
+        }
+
+        header {
+            background-color: red;
+            text-align: center;
+            
+        }
+
+        h1 {
+            font-weight: bolder;
+            color: white;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        
+    </style>
+</head>
+
+<header>
+    <a class="text-center"><h1>MERRY CHRISTMAS</h1></a>
+</header>
+
+<body>
+    <marquee>
+        <img src="img/gif.gif" class="snow">
+    </marquee>
+
+    <div class="container">
+        <div class="row clearfix" style="margin-top: 40px;">
+            <div>
+                <img src="img/front.jpg" alt="Front Image">
+            </div>
+            <div>
+                <img src="img/back.jpg" alt="Back Image">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
+                <button class="btn btn-primary">Click me</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

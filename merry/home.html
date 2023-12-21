@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOU ARE INVITED!!</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <style>
+        
+        header {     
+            background-color: red;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000; 
+        }
+
+        h1 {        
+            font-weight: bolder;
+            color: white;
+            margin: 0; 
+        }
+
+        body {
+            background-image: url(img/background.png);
+            margin-top: 80px;
+
+        }
+
+
+        img {
+            width: 70%;
+            height: 100%;
+            object-fit: cover;
+            margin-left: 100px;
+            border: 5px solid black;
+        }
+
+        .image-container {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: 600px;
+        }
+
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            height: 100px;
+            width: 400px;
+        }
+
+        #animation-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999; 
+            pointer-events: none; 
+        }
+
+        #animated-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+    </style>
+</head>
+
+<header>
+    <a class="text-center"><h1>MERRY CHRISTMAS</h1></a>
+</header>
+
+<body>
+    <div id="animation-container">
+        <img id="animated-image" src="img/snow5.gif" alt="Animated Image">
+    </div>
+
+    <div class="container">
+        <div class="row image-container">
+            <div class="col-sm-6">
+                <img src="img/harap.png">
+            </div>
+            <div class="col-sm-6">
+                <img src="img/likod.png">
+            </div>
+        </div>
+
+        <button onclick="openPopup()">Open Message!!</button>
+        <div id="popup">
+            <h2 style="text-align: center;">You are Invited to Christmas Party!!</h2>
+            <h3 style="text-align: center;">7:00am - 3:00pm</h3>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+        setTimeout(closePopup, 3000);
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+</html>
